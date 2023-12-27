@@ -1,0 +1,42 @@
+[System]
+Name='parking_linea'
+Type='mamdani'
+Version=2.0
+NumInputs=1
+NumOutputs=2
+NumRules=3
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='sensor10'
+Range=[0 6]
+NumMFs=3
+MF1='CERCA':'trimf',[0 0 1]
+MF2='MEDIO':'trimf',[0 1 2]
+MF3='LEJOS':'trimf',[1 6 6]
+
+[Output1]
+Name='V'
+Range=[-36 6]
+NumMFs=6
+MF1='NEG_MUY_GRANDE':'trimf',[-36 -30 -24]
+MF2='NEG_MEDIO':'trimf',[-24 -18 -12]
+MF3='NEG_MUY_PEQUEÑO':'trimf',[-12 -6 0]
+MF4='NEG_GRANDE':'trimf',[-30 -24 -18]
+MF5='NEG_PEQUEÑO':'trimf',[-18 -12 -6]
+MF6='ZERO':'trimf',[-6 0 6]
+
+[Output2]
+Name='W'
+Range=[-1 1]
+NumMFs=1
+MF1='mf2':'trimf',[-1 0 1]
+
+[Rules]
+1, 1 1 (1) : 1
+2, 2 1 (1) : 1
+3, 6 1 (1) : 1

@@ -4,7 +4,7 @@ Type='mamdani'
 Version=2.0
 NumInputs=8
 NumOutputs=2
-NumRules=10
+NumRules=13
 AndMethod='min'
 OrMethod='max'
 ImpMethod='min'
@@ -15,10 +15,10 @@ DefuzzMethod='centroid'
 Name='sensor0'
 Range=[0 5]
 NumMFs=4
-MF1='CERCA':'trimf',[0 0 1.21]
+MF1='CERCA':'trimf',[0 0 1.36]
 MF2='GRADUAL':'linzmf',[1.5 3.25]
 MF3='MEDIO':'trimf',[1.2 1.4 1.6]
-MF4='LEJOS':'trimf',[1.59 5 5]
+MF4='LEJOS':'trimf',[1.44 5 5]
 
 [Input2]
 Name='sensor4'
@@ -31,8 +31,8 @@ MF2='LEJOS':'trimf',[0.2 5 5]
 Name='sensor5'
 Range=[0 5]
 NumMFs=4
-MF1='CERCA':'trimf',[0 0 1.21]
-MF2='LEJOS':'trimf',[1.59 5 5]
+MF1='CERCA':'trimf',[0 0 1.36]
+MF2='LEJOS':'trimf',[1.44 5 5]
 MF3='MEDIO':'trimf',[1.2 1.4 1.6]
 MF4='MUY_CERCA':'trimf',[0 0 0.5]
 
@@ -40,8 +40,8 @@ MF4='MUY_CERCA':'trimf',[0 0 0.5]
 Name='sensor6'
 Range=[0 5]
 NumMFs=4
-MF1='CERCA':'trimf',[0 0 1.21]
-MF2='LEJOS':'trimf',[1.59 5 5]
+MF1='CERCA':'trimf',[0 0 1.36]
+MF2='LEJOS':'trimf',[1.44 5 5]
 MF3='MEDIO':'trimf',[1.2 1.4 1.6]
 MF4='MUY_CERCA':'trimf',[0 0 0.5]
 
@@ -70,8 +70,8 @@ MF2='LEJOS':'trimf',[2.1 5 5]
 Name='sensor11'
 Range=[0 5]
 NumMFs=3
-MF1='CERCA':'trimf',[0 0 1.21]
-MF2='LEJOS':'trimf',[1.59 5 5]
+MF1='CERCA':'trimf',[0 0 1.36]
+MF2='LEJOS':'trimf',[1.44 5 5]
 MF3='MEDIO':'trimf',[1.2 1.4 1.6]
 
 [Output1]
@@ -79,10 +79,10 @@ Name='W'
 Range=[-120 120]
 NumMFs=7
 MF1='ZERO':'trimf',[-30 0 30]
-MF2='IZQ_PEQUEÑO':'trimf',[0.507399577167007 30.507399577167 60.507399577167]
+MF2='IZQ_PEQUEÑO':'trimf',[20 50 80]
 MF3='IZQ_GRANDE':'trimf',[60 90 120]
 MF4='IZQ_MEDIO':'trimf',[40 70 100]
-MF5='DER_PEQUEÑO':'trimf',[-60 -30 0]
+MF5='DER_PEQUEÑO':'trimf',[-80 -50 -20]
 MF6='DER_GRANDE':'trimf',[-120 -90 -60]
 MF7='DER_MEDIO':'trimf',[-100 -70 -40]
 
@@ -108,4 +108,7 @@ MF7='APARCAR':'trimf',[-9 -5 -1]
 1 0 2 2 2 2 1 1, 7 5 (1) : 1
 4 0 1 1 2 2 1 2, 4 5 (1) : 1
 4 0 1 2 2 2 1 1, 7 5 (1) : 1
-3 0 3 0 2 2 1 0, 1 2 (1) : 1
+3 0 3 2 2 2 1 1, 5 5 (1) : 1
+3 0 3 1 2 2 1 2, 2 5 (1) : 1
+4 0 1 3 2 2 1 3, 6 5 (1) : 1
+1 0 2 3 2 2 1 3, 2 5 (1) : 1

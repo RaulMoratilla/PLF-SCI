@@ -17,7 +17,7 @@ Range=[0 5]
 NumMFs=5
 MF1='CERCA':'trimf',[0 0 1.4]
 MF2='MEDIO':'trimf',[1 1.2 1.4]
-MF3='LEJOS':'trimf',[1 2.8 2.8]
+MF3='LEJOS':'trapmf',[1 2.4 2.8 2.8]
 MF4='MUY_CERCA':'trimf',[0 0 0.7]
 MF5='MUY_LEJOS':'trimf',[2.8 5 5]
 
@@ -25,7 +25,7 @@ MF5='MUY_LEJOS':'trimf',[2.8 5 5]
 Name='sensor5'
 Range=[0 5]
 NumMFs=5
-MF1='CERCA':'trimf',[0 0 1.8]
+MF1='CERCA':'trapmf',[0 0 0.4 1.8]
 MF2='LEJOS':'trimf',[1.4 2.8 2.8]
 MF3='MEDIO':'trimf',[1.4 1.6 1.8]
 MF4='MUY_CERCA':'trimf',[0 0 0.7]
@@ -35,8 +35,8 @@ MF5='MUY_LEJOS':'trimf',[2.8 5 5]
 Name='sensor6'
 Range=[0 5]
 NumMFs=4
-MF1='CERCA':'trimf',[0 0 1.8]
-MF2='LEJOS':'trimf',[1.4 2.8 2.8]
+MF1='CERCA':'trapmf',[0 0 0.4 1.8]
+MF2='LEJOS':'linsmf',[1.4 2.8]
 MF3='MEDIO':'trimf',[1.4 1.6 1.8]
 MF4='MUY_CERCA':'trimf',[0 0 0.5]
 
@@ -70,7 +70,7 @@ Name='sensor11'
 Range=[0 5]
 NumMFs=3
 MF1='CERCA':'trimf',[0 0 1.4]
-MF2='LEJOS':'linsmf',[1 2.8]
+MF2='LEJOS':'linsmf',[1 2.4]
 MF3='MEDIO':'trimf',[1 1.2 1.4]
 
 [Output1]

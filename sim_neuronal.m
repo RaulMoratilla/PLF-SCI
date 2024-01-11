@@ -31,7 +31,7 @@ disp(inputs)
 METODO = "trainlm";
 
 % Creación de la red
-hiddenLayerSize = 55;
+hiddenLayerSize = 57;
 
 net = feedforwardnet(hiddenLayerSize, METODO);
 

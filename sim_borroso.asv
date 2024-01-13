@@ -1,2 +1,0 @@
-out = sim("ackerman_ROS_fuzzy_controller.slx");
-xlswrite()

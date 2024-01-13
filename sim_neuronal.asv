@@ -17,19 +17,9 @@ for i = 1:N_DATASETS
     dataset = [dataset ; datos];
 end
 
-mdl = fitlm(dataset(:, 1), dataset(:, 2));
-
-distances = mdl.predict - dataset(:, 2);
-
-threshold = 2.25 * mean(abs(distances));
-
-outliers = abs(distances) > threshold;
-
-dataset = dataset(~outliers, :);
-
 numfilas = size(dataset, 1);
-indicepermutacion = randperm(numfilas);
-dataset = dataset(indicepermutacion, :);
+%indicepermutacion = randperm(numfilas);
+%dataset = dataset(indicepermutacion, :);
 inputs = dataset(:,1:7);
 targets = dataset(:,8:9);
 
@@ -41,7 +31,7 @@ disp(inputs)
 METODO = "trainlm";
 
 % Creación de la red
-hiddenLayerSize = [8 4];
+hiddenLayerSize = [8, 4];
 
 net = feedforwardnet(hiddenLayerSize, METODO);
 
@@ -62,6 +52,16 @@ gensim(net);
 
 save("netData.mat", "net");
 
+%%
 
+dataset = % tu conjunto de datos
+mean_value = mean(dataset);
+std_dev = std(dataset);
+
+% Definir un umbral (por ejemplo, 3 veces la desviación estándar)
+threshold = 3 * std_dev;
+
+% Identificar outliers
+outliers = abs(data - mean_value) > threshold;
 
 

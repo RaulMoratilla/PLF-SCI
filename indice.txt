@@ -1,0 +1,23 @@
+Introduccion al problema
+
+Borroso
+Introduccion a borroso (usamos mamdani)
+Graficas
+	Inputs
+	Outputs
+Reglas
+Ejecucion
+	Ejecucion 1
+	Ejecucion 2
+
+Neuronal
+Introduccion a neuronal
+Datos de entrenamiento
+Cosas sobre la red (tipo, neuronas, performance)
+Ejecucion
+	Ejecucion 1
+	Ejecucion 2
+
+Ejecuciones complementarias
+
+Conclusion

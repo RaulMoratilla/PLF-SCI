@@ -1,0 +1,1 @@
+La ejecución del entorno definitivo se realiza en el minuto 6:41.
